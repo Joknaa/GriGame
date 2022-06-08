@@ -4,27 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GriGame {
-    public class Tile : MonoBehaviour {
-        [SerializeField] private SpriteRenderer rend;
-        [SerializeField] private Color baseColor;
-        [SerializeField] private Color otherColor;
-        [SerializeField] private GameObject highlight;
-        private bool isHighlighted;
+    public abstract class Tile : MonoBehaviour {
+        [SerializeField] protected float weight;
+        [SerializeField] protected Color baseColor;
 
-        public void Init(int x, int y) {
-            bool isBase = (x + y) % 2 == 0;
-            rend.color = isBase ? baseColor : otherColor;
-            name = $"Time {x}, {y}";
+        protected SpriteRenderer spriteRenderer;
+        private GameObject highlight;
+        
+
+        protected virtual void Awake() {
+            highlight = transform.GetChild(0).gameObject;
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        public void OnMouseEnter() {
-            isHighlighted = true;
-            highlight.SetActive(true);
+        public virtual void Init(int x, int y) {
+            name = $"Tile {x}, {y}";
+            spriteRenderer.color = baseColor;
         }
 
-        public void OnMouseExit() {
-            isHighlighted = false;
-            highlight.SetActive(false);
-        }
+        
+        public void OnMouseEnter() => highlight.SetActive(true);
+        public void OnMouseExit() => highlight.SetActive(false);
+        
+        public float GetWeight() => weight;
     }
 }

@@ -92,10 +92,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6280164638903133369}
   - component: {fileID: 62398200337741759}
-  - component: {fileID: 5696788996161754524}
   - component: {fileID: 5184252657521841703}
+  - component: {fileID: 7511804398077197164}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: WaterTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,22 +167,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5696788996161754524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005960710131230929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d12f054cef2d548958d264268f7558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 62398200337741759}
-  baseColor: {r: 1, g: 0.7056054, b: 0.2971698, a: 1}
-  otherColor: {r: 1, g: 0.760857, b: 0.4292453, a: 1}
-  highlight: {fileID: 2256736918652121180}
 --- !u!61 &5184252657521841703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,3 +193,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7511804398077197164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005960710131230929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b562044821a47de9a8df53e60aa5443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0.1
+  baseColor: {r: 0.21960661, g: 0.6722222, b: 0.990566, a: 1}
