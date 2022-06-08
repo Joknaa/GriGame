@@ -10,6 +10,21 @@ namespace GriGame {
 
         void Start() {
             GenerateGrid();
+            GenerateUnits();
+        }
+
+        private void GenerateUnits() {
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+                        GameObject unit = Instantiate(Resources.LoadAll<Tile>("Units").ToList().Random().gameObject);
+                        unit.transform.position = new Vector3(j, i, 0);
+                        unit.transform.parent = transform;
+                        unit.GetComponent<Tile>().Init(i, j);
+
+                    }
+                }
+            }
         }
 
         private void GenerateGrid() {

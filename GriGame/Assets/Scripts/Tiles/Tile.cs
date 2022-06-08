@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using OknaaEXTENSIONS;
 using UnityEngine;
 
 namespace GriGame {
     public abstract class Tile : MonoBehaviour {
         [SerializeField] protected float weight;
-        [SerializeField] protected Color baseColor;
+        [SerializeField] protected List<Sprite> sprites;
 
         protected SpriteRenderer spriteRenderer;
         private GameObject highlight;
@@ -19,7 +20,7 @@ namespace GriGame {
 
         public virtual void Init(int x, int y) {
             name = $"Tile {x}, {y}";
-            spriteRenderer.color = baseColor;
+            spriteRenderer.sprite = sprites.Random();
         }
 
         

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6280164638903133369}
   - component: {fileID: 62398200337741759}
   - component: {fileID: 5184252657521841703}
-  - component: {fileID: 7511804398077197164}
+  - component: {fileID: -4413888261639922440}
   m_Layer: 0
-  m_Name: WaterTile
+  m_Name: TreeUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_LocalPosition: {x: 1.1400616, y: -0.91206074, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3939042194474001561}
+  - {fileID: 6924910358077979005}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7511804398077197164
+--- !u!114 &-4413888261639922440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,13 +120,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9005960710131230929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b562044821a47de9a8df53e60aa5443, type: 3}
+  m_Script: {fileID: 11500000, guid: d4f6afa7b0ac486189bc30a0f9209f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.1
+  weight: 0
   sprites:
-  - {fileID: -537749870668139058, guid: 1ea0944abf604c742b52879577844c2e, type: 3}
---- !u!1001 &6284478725266330451
+  - {fileID: 7223950226953391895, guid: 1ea0944abf604c742b52879577844c2e, type: 3}
+--- !u!1001 &109924073608515255
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -183,8 +183,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd41ffb88c7ac543b07b89375d7b9f2, type: 3}
---- !u!4 &3939042194474001561 stripped
+--- !u!4 &6924910358077979005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7033705741841741770, guid: 3fd41ffb88c7ac543b07b89375d7b9f2, type: 3}
-  m_PrefabInstance: {fileID: 6284478725266330451}
+  m_PrefabInstance: {fileID: 109924073608515255}
   m_PrefabAsset: {fileID: 0}

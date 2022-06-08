@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using OknaaEXTENSIONS;
 using UnityEngine;
 
 namespace GriGame {
-    public class Plain : Tile {
+    public class Unit : Tile {
         
-       
     }
 }
